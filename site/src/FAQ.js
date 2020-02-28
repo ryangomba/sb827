@@ -25,15 +25,13 @@ export default () => (
           Oh, heavens no. I have given money in support of YIMBY Action&apos;s
           ballot proposition, I have known Scott Wiener socially for several
           years, and I consider myself a YIMBY advocate, but{" "}
-          <del>I have no official connection to the advocates of this bill</del>,
-          and there is absolutely nothing official about this site or map. (<strong
-          >
-            Update Jan 17, 2018
-          </strong>: After publishing this map, I was invited to a meeting with
-          the bill&apos;s advocates (CA YIMBY), and I went. So, I&apos;ve
-          received snacks and pizza from the advocates and am starting to work
-          with them, but this still is not an official map, and I do not speak
-          on their behalf.)
+          <del>I have no official connection to the advocates of this bill</del>
+          , and there is absolutely nothing official about this site or map. (
+          <strong>Update Jan 17, 2018</strong>: After publishing this map, I was
+          invited to a meeting with the bill&apos;s advocates (CA YIMBY), and I
+          went. So, I&apos;ve received snacks and pizza from the advocates and
+          am starting to work with them, but this still is not an official map,
+          and I do not speak on their behalf.)
         </p>
         <h3 style={{ textAlign: "left" }}>Are you in favor of SB 827?</h3>
         <p style={{ textAlign: "left" }}>
@@ -42,7 +40,6 @@ export default () => (
           proposals I&apos;ve seen that is actually on the right scale of
           ambition to address the state&apos;s housing crisis.
         </p>
-        <a name="assumptions" />
         <h3 style={{ textAlign: "left" }}>
           What assumptions did you make in this map?
         </h3>
@@ -78,8 +75,9 @@ export default () => (
                 Further, I drew a straight line between the two bus stops, which
                 may not represent the actual path of the bus between the two
                 stops.
-              </del>. (<strong>Update Feb 13, 2018</strong>: I understand from
-              Senator Wiener&apos;s office that the bill will be changed to use
+              </del>
+              . (<strong>Update Feb 13, 2018</strong>: I understand from Senator
+              Wiener&apos;s office that the bill will be changed to use
               high-frequency bus stops, rather than corridors. I have updated
               the map to reflect that.)
             </li>
@@ -112,7 +110,8 @@ export default () => (
               added, thanks to the work of{" "}
               <a href="https://twitter.com/evan_siroky" rel="nofollow">
                 @evan_siroky
-              </a>.)
+              </a>
+              .)
             </li>
             <li>
               <strong>How big is a "block"?</strong>{" "}
@@ -301,14 +300,16 @@ export default () => (
                 smaller cities. Thanks to the many folks on Twitter (including{" "}
                 <a href="https://twitter.com/paulf917/status/950804494090166273">
                   @paulf917
-                </a>,{" "}
+                </a>
+                ,{" "}
                 <a href="https://twitter.com/theGreaterMarin/status/950795205652959232">
                   @theGreaterMarin
-                </a>, and{" "}
+                </a>
+                , and{" "}
                 <a href="https://twitter.com/evan_siroky/status/950764671669190656">
                   @evan_siroky
-                </a>) who pointed out that Bakersfield and Santa Cruz seemed
-                wrong.
+                </a>
+                ) who pointed out that Bakersfield and Santa Cruz seemed wrong.
               </li>
               <li>
                 <strong>Version 2.0.1 (Jan 9, 2018)</strong>: Made the banner
@@ -435,13 +436,15 @@ export default () => (
               <li>
                 <strong>Version 4.2 (Mar 27, 2018)</strong>: Added analysis of
                 frequency-based schedules. Added data for Anaheim Resort
-                Transportation, Dumbarton Express, Kings Area Rural Transit (<a
+                Transportation, Dumbarton Express, Kings Area Rural Transit (
+                <a
                   href="https://github.com/BlinkTagInc/kart-gtfs"
                   rel="nofollow"
                 >
                   thanks to BlinkTagInc
-                </a>), Porterville Transit, Tri Delta Transit and Visalia
-                Transit. Thanks to{" "}
+                </a>
+                ), Porterville Transit, Tri Delta Transit and Visalia Transit.
+                Thanks to{" "}
                 <a href="https://twitter.com/evan_siroky" rel="nofollow">
                   @evan_siroky
                 </a>{" "}

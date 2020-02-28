@@ -24,13 +24,15 @@ export default () => (
             Transit data pulled from many different transit service websites and{" "}
             <a href="https://transitfeeds.com/" rel="nofollow">
               transitfeeds.com
-            </a>.
+            </a>
+            .
           </li>
           <li>
             Polygon manipulation performed by the excellent{" "}
             <a href="http://turfjs.org" rel="nofollow">
               turf.js library
-            </a>. Seriously, that library is awesome.
+            </a>
+            . Seriously, that library is awesome.
           </li>
           <li>Banner image is a modified snap from the SF Muni bus map.</li>
           <li>Google Maps remains a towering technical achievement.</li>
@@ -45,7 +47,8 @@ export default () => (
             by Paulo Avila licensed under CC0 from{" "}
             <a href="https://snazzymaps.com/" rel="nofollow">
               snazzymaps.com
-            </a>.
+            </a>
+            .
           </li>
         </ul>
       </div>

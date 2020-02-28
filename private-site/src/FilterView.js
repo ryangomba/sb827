@@ -313,7 +313,8 @@ class FilterView extends React.Component {
             checked={filters.showZoning}
             onChange={this._onShowZoningChanged}
             label="Zoning"
-          />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {this._renderZoning()}
         </div>
       </div>
@@ -341,7 +342,8 @@ class FilterView extends React.Component {
           value="height"
           onChange={this._onShowZoningHeightChanged}
           label="&#127970;&nbsp;Height Limit"
-        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Checkbox
           radio
           checked={filters.zoningLayer === "parking"}
@@ -349,7 +351,8 @@ class FilterView extends React.Component {
           value="parking"
           onChange={this._onShowZoningParkingChanged}
           label="&#128663;&nbsp;Parking"
-        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Checkbox
           radio
           checked={filters.zoningLayer === "density"}
@@ -363,15 +366,19 @@ class FilterView extends React.Component {
             filters.zoningLayer === "parking"
               ? PARKING
               : filters.zoningLayer === "density"
-                ? DENSITY
-                : filters.zoningLayer === "height" ? HEIGHT_LIMIT : null
+              ? DENSITY
+              : filters.zoningLayer === "height"
+              ? HEIGHT_LIMIT
+              : null
           }
           units={
             filters.zoningLayer === "parking"
               ? "spaces per 2-bedroom unit"
               : filters.zoningLayer === "density"
-                ? "units per acre"
-                : filters.zoningLayer === "height" ? "feet" : null
+              ? "units per acre"
+              : filters.zoningLayer === "height"
+              ? "feet"
+              : null
           }
         />
       </React.Fragment>

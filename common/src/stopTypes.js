@@ -50,9 +50,9 @@ const STOP_TYPE_HIGH_FREQUENCY_BUS_SUNDAY_2X_8AM_10PM = 101;
 // function used to filter stops to high-frequency stops that should appear on the public map
 // This function can be updated based on the current text of SB827.
 // Currently it represents the 2018-04-09 amendments
-function isHighFrequencyStopUnderCurrentSB827Text ({ types }) {
+function isHighFrequencyStopUnderCurrentSB827Text({ types }) {
   // previous definition, from when things were simple
-  return types.includes(STOP_TYPE_HIGH_FREQUENCY_BUS)
+  return types.includes(STOP_TYPE_HIGH_FREQUENCY_BUS);
 
   // return types.includes(STOP_TYPE_HIGH_FREQUENCY_BUS_3X_6AM_10PM) && // all day service
   //   types.includes(STOP_TYPE_HIGH_FREQUENCY_BUS_SATURDAY_2X_8AM_10PM) && // on weekends also
@@ -74,11 +74,13 @@ function isHighFrequencyStopUnderCurrentSB827Text ({ types }) {
 }
 
 // I guess this is a summary of the types above?
-function stopClassForStopTypes (types) {
-  if ([STOP_TYPE_MTS_FERRY, STOP_TYPE_MTS_RAIL].some(typ => types.includes(typ)))
-      return STOP_CLASS_MTS;
-  else if (isHighFrequencyStopUnderCurrentSB827Text({types}))
-      return STOP_CLASS_HFS;
+function stopClassForStopTypes(types) {
+  if (
+    [STOP_TYPE_MTS_FERRY, STOP_TYPE_MTS_RAIL].some(typ => types.includes(typ))
+  )
+    return STOP_CLASS_MTS;
+  else if (isHighFrequencyStopUnderCurrentSB827Text({ types }))
+    return STOP_CLASS_HFS;
   else return 0;
 }
 
@@ -122,7 +124,6 @@ module.exports = {
 
   STOP_TYPE_HIGH_FREQUENCY_BUS_SATURDAY_2X_8AM_10PM,
   STOP_TYPE_HIGH_FREQUENCY_BUS_SUNDAY_2X_8AM_10PM,
-
 
   isHighFrequencyStopUnderCurrentSB827Text,
   stopClassForStopTypes

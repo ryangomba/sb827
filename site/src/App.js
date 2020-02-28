@@ -61,17 +61,14 @@ class App extends Component {
           <h1>What would SB 827 really look like?</h1>
         </section>
         <Intro />
-        <a name="map" />
         <MapSection
           noRiseShape={this.state.noRiseShape}
           lowRiseShape={this.state.lowRiseShape}
           highRiseShape={this.state.highRiseShape}
           busSegments={this.state.busSegments}
         />
-        <a name="discussion" />
         <Discussion />
         <hr />
-        <a name="faq" />
         <FAQ />
         <Credits />
       </div>

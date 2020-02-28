@@ -155,7 +155,7 @@ export default class LegislatureTable extends React.Component {
                   <Table.Cell>{mtsRail}</Table.Cell>
                   <Table.Cell>{total}</Table.Cell>
                   <Table.Cell>
-                    {(total * 100 / stateTotal).toFixed(1)}%
+                    {((total * 100) / stateTotal).toFixed(1)}%
                   </Table.Cell>
                 </Table.Row>
               )

@@ -5,12 +5,12 @@ const turf = require("@turf/turf");
 const transit = require("./transit");
 const legislative = require("./legislative");
 const { convert } = require("@aickin/visualize-density-common");
-const runTime = require('./utils/runTime')
+const runTime = require("./utils/runTime");
 
 main();
 
 async function main() {
-  const startTime = new Date()
+  const startTime = new Date();
 
   // gather raw data
 
@@ -23,9 +23,9 @@ async function main() {
     agencyData
   } = await transit.run();
 
-  const transitRunEndTime = new Date()
+  const transitRunEndTime = new Date();
 
-  runTime('[transit] transit.run', startTime, transitRunEndTime)
+  runTime("[transit] transit.run", startTime, transitRunEndTime);
 
   // generate public site data
 
@@ -41,7 +41,7 @@ async function main() {
   );
 
   fs.writeFileSync(
-    '../private-site/public/agency-data.json',
+    "../private-site/public/agency-data.json",
     JSON.stringify(agencyData)
   );
 
@@ -62,9 +62,9 @@ async function main() {
 
   console.log("[site] Writing complete.");
 
-  const siteRunEndTime = new Date()
+  const siteRunEndTime = new Date();
 
-  runTime('[site] output writing', transitRunEndTime, siteRunEndTime)
+  runTime("[site] output writing", transitRunEndTime, siteRunEndTime);
 
   // generate private site data
 
@@ -73,7 +73,10 @@ async function main() {
   async function addDistrictInfo(stop) {
     return {
       ...stop,
-      ...await legislative.getDistrictInfoForPoint({ lat: stop.lat, lng: stop.lng })
+      ...(await legislative.getDistrictInfoForPoint({
+        lat: stop.lat,
+        lng: stop.lng
+      }))
     };
   }
 
@@ -81,13 +84,13 @@ async function main() {
 
   fs.writeFileSync(`${__dirname}/output/stops.json`, JSON.stringify(stops));
 
-  const privateSiteStopEndTime = new Date()
+  const privateSiteStopEndTime = new Date();
 
   runTime(
-    '[private-site] district info per stop caluclations',
+    "[private-site] district info per stop caluclations",
     siteRunEndTime,
     privateSiteStopEndTime
-  )
+  );
 
   console.log("[private-site] Writing coastal zone...");
 
@@ -104,13 +107,13 @@ async function main() {
   );
   console.log("[private-site] Writing complete.");
 
-  const coastalZoneEndTime = new Date()
+  const coastalZoneEndTime = new Date();
 
   runTime(
-    '[private-site] coastal zone caluclations',
+    "[private-site] coastal zone caluclations",
     privateSiteStopEndTime,
     coastalZoneEndTime
-  )
+  );
 
   console.log("[district-site] Calculating per-district intersections...");
 
@@ -130,8 +133,8 @@ async function main() {
   console.log("[district-site] Writing complete.");
 
   runTime(
-    '[district-site] district site caluclations',
+    "[district-site] district site caluclations",
     coastalZoneEndTime,
     new Date()
-  )
+  );
 }

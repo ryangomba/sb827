@@ -13,7 +13,8 @@ const AreaTable = ({ area, name }) => (
         <Table.HeaderCell>Area (sq. mi.)</Table.HeaderCell>
         <Table.HeaderCell>
           % of {name}
-          <br />Total Area
+          <br />
+          Total Area
         </Table.HeaderCell>
       </Table.Row>
     </Table.Header>
@@ -24,7 +25,7 @@ const AreaTable = ({ area, name }) => (
         </Table.Cell>
         <Table.Cell>{area.lowArea.toFixed(1)}</Table.Cell>
         <Table.Cell>
-          {(area.lowArea * 100 / area.totalArea).toFixed(1)}%
+          {((area.lowArea * 100) / area.totalArea).toFixed(1)}%
         </Table.Cell>
       </Table.Row>
       <Table.Row>
@@ -33,7 +34,7 @@ const AreaTable = ({ area, name }) => (
         </Table.Cell>
         <Table.Cell>{area.highArea.toFixed(1)}</Table.Cell>
         <Table.Cell>
-          {(area.highArea * 100 / area.totalArea).toFixed(1)}%
+          {((area.highArea * 100) / area.totalArea).toFixed(1)}%
         </Table.Cell>
       </Table.Row>
       <Table.Row>
@@ -42,7 +43,7 @@ const AreaTable = ({ area, name }) => (
         </Table.Cell>
         <Table.Cell>{area.noArea.toFixed(1)}</Table.Cell>
         <Table.Cell>
-          {(area.noArea * 100 / area.totalArea).toFixed(1)}%
+          {((area.noArea * 100) / area.totalArea).toFixed(1)}%
         </Table.Cell>
       </Table.Row>
       <Table.Row>
@@ -57,10 +58,11 @@ const AreaTable = ({ area, name }) => (
         </Table.Cell>
         <Table.Cell>
           {(
-            (area.totalArea - area.highArea - area.lowArea - area.noArea) *
-            100 /
+            ((area.totalArea - area.highArea - area.lowArea - area.noArea) *
+              100) /
             area.totalArea
-          ).toFixed(1)}%
+          ).toFixed(1)}
+          %
         </Table.Cell>
       </Table.Row>
     </Table.Body>

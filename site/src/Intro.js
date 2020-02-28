@@ -31,10 +31,12 @@ export default () => (
           On January 4th, 2018, California State Senator Scott Wiener{" "}
           <a href="https://artplusmarketing.com/california-needs-a-housing-first-agenda-my-2018-housing-package-1b6fe95e41da">
             announced a series of proposed housing bills
-          </a>. By far the most attention has been directed at{" "}
+          </a>
+          . By far the most attention has been directed at{" "}
           <a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201720180SB827">
             Senate Bill 827 (SB 827)
-          </a>, which would override local zoning controls on height, density,
+          </a>
+          , which would override local zoning controls on height, density,
           parking minimums, and design review on properties within a certain
           distance of major public transit infrastructure.
         </p>
@@ -46,13 +48,14 @@ export default () => (
           <strong>
             should only be used as a beginning point for the policy discussion
             around the bill and not for making any important decisions
-          </strong>. I <strong>cannot state strongly enough</strong> that there
-          are multiple errors with this map, due to{" "}
+          </strong>
+          . I <strong>cannot state strongly enough</strong> that there are
+          multiple errors with this map, due to{" "}
           <strong>missing and incorrect data</strong>,{" "}
           <strong>
             probable misinterpretations of the proposed law as written
-          </strong>, <strong>bugs in my software</strong>, and multiple other
-          reasons.
+          </strong>
+          , <strong>bugs in my software</strong>, and multiple other reasons.
         </p>
         <p style={{ textAlign: "left" }}>
           <strong style={{ textDecoration: "underline" }}>

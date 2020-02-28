@@ -29,9 +29,7 @@ class AnalyticsListener extends Component {
       // back button shouldn't trigger a GA hit.
       if (action === "PUSH" && window.gtag) {
         window.gtag("config", "UA-114530396-1", {
-          page_location: `https://sb827.info${location.pathname}${
-            location.search
-          }`,
+          page_location: `https://sb827.info${location.pathname}${location.search}`,
           page_path: `${location.pathname}${location.search}`
         });
       }

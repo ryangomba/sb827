@@ -65,7 +65,8 @@ export default () => (
           My first impression from this map is that SB 827 is indeed, as{" "}
           <a href="https://twitter.com/MarketUrbanism/status/949089055727382528">
             @MarketUrbanism has said
-          </a>, a{" "}
+          </a>
+          , a{" "}
           <del>
             <strong>very</strong>
           </del>{" "}
@@ -104,11 +105,12 @@ export default () => (
             egregious example of this, take the{" "}
             <a href="https://en.wikipedia.org/wiki/Silver_Line_(Los_Angeles_Metro)">
               LA Metro Silver line
-            </a>, a Bus Rapid Transit line in Los Angeles: the El Monte stop and
-            Cal State LA stop are about 8 miles apart from each other, with no
-            stops in between. While it makes total sense to me to upzone around
-            these two stops, it&apos;s very hard for me to see why the 8 miles
-            in between should also be upzoned. I expect that if SB 827 goes
+            </a>
+            , a Bus Rapid Transit line in Los Angeles: the El Monte stop and Cal
+            State LA stop are about 8 miles apart from each other, with no stops
+            in between. While it makes total sense to me to upzone around these
+            two stops, it&apos;s very hard for me to see why the 8 miles in
+            between should also be upzoned. I expect that if SB 827 goes
             forward, this sort of thing will need to be addressed.
           </del>{" "}
           (<strong>Update Feb 13, 2018</strong>: I understand from Senator

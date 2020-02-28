@@ -8,9 +8,8 @@ export default () => (
       <div style={{ paddingTop: "1.5em" }}>
         If you are a journalist looking to interview an advocate about the
         contents of this site, please contact <strong>Louis Mirante</strong>,
-        Legislative and Partnerships Director at CA YIMBY (<a href="mailto:louis@cayimby.org">
-          louis@cayimby.org
-        </a>).
+        Legislative and Partnerships Director at CA YIMBY (
+        <a href="mailto:louis@cayimby.org">louis@cayimby.org</a>).
       </div>
     </div>
     <Header size="huge">Who Made This Site?</Header>

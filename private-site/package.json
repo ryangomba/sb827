@@ -8,13 +8,13 @@
     "@turf/turf": "^5.1.6",
     "lodash.startcase": "^4.4.0",
     "mapbox-gl": "^0.44.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
     "react-google-maps": "^9.4.5",
     "react-mapbox-gl": "^3.8.0",
     "react-modal": "^3.1.11",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.0",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.77.2"
   },
@@ -23,5 +23,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

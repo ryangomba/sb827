@@ -103,7 +103,8 @@ class ZoningTile extends React.Component {
     return (
       <React.Fragment>
         {this.state.data &&
-          this.state.data.features.map(f => this.featToPolygon(f))}}
+          this.state.data.features.map(f => this.featToPolygon(f))}
+        }
       </React.Fragment>
     );
   }

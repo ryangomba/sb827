@@ -10,12 +10,16 @@ function polygonToPointArray(polygon) {
     case "Polygon":
       return polygonCoordinatesToPointArray(polygon.geometry.coordinates);
     case "MultiPolygon":
-      return polygon.geometry.coordinates.map(polygonCoordinatesToPointArray).reduce((prev, curr) => [...prev, ...curr], []);
+      return polygon.geometry.coordinates
+        .map(polygonCoordinatesToPointArray)
+        .reduce((prev, curr) => [...prev, ...curr], []);
   }
 }
 
 function polygonCoordinatesToPointArray(polygonCoordinates) {
-  return polygonCoordinates.map(linearRing => linearRing.map(([lng, lat]) => ({ lat, lng })));
+  return polygonCoordinates.map(linearRing =>
+    linearRing.map(([lng, lat]) => ({ lat, lng }))
+  );
 }
 
 function geometryCollectionToPointArray(geometryCollection) {
@@ -33,7 +37,11 @@ function geometryCollectionToPointArray(geometryCollection) {
 
 function pointArrayToFeatureArray(points, propMapper) {
   return points.map(point => {
-    const { lat, lng, ...properties } = point;
+    const { lat, lng } = point;
+    // TEMP
+    const properties = point;
+    delete properties["lat"];
+    delete properties["lng"];
     return {
       type: "Feature",
       geometry: {
@@ -47,12 +55,19 @@ function pointArrayToFeatureArray(points, propMapper) {
 
 function segmentArrayToFeatureArray(segments) {
   return segments.map(segment => {
-    const { from, to, ...properties } = segment;
+    const { from, to } = segment;
+    // TEMP
+    const properties = segment;
+    delete properties["from"];
+    delete properties["to"];
     return {
       type: "Feature",
       geometry: {
         type: "LineString",
-        coordinates: [[from.lng, from.lat], [to.lng, to.lat]]
+        coordinates: [
+          [from.lng, from.lat],
+          [to.lng, to.lat]
+        ]
       },
       properties
     };

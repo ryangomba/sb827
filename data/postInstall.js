@@ -14,43 +14,28 @@ const fs = require("fs");
 const path = require("path");
 
 ["long-beach-transit", "los-angeles-metro-bus"].forEach(agency => {
-  fs
-    .createReadStream(
-      path.join(
-        __dirname,
-        "transit",
-        "agencies",
-        agency,
-        "stop_times_part_1.txt"
-      )
-    )
+  fs.createReadStream(
+    path.join(__dirname, "transit", "agencies", agency, "stop_times_part_1.txt")
+  )
     .pipe(
       fs.createWriteStream(
         path.join(__dirname, "transit", "agencies", agency, "stop_times.txt")
       )
     )
     .on("close", () => {
-      fs
-        .createReadStream(
-          path.join(
-            __dirname,
-            "transit",
-            "agencies",
-            agency,
-            "stop_times_part_2.txt"
-          )
+      fs.createReadStream(
+        path.join(
+          __dirname,
+          "transit",
+          "agencies",
+          agency,
+          "stop_times_part_2.txt"
         )
-        .pipe(
-          fs.createWriteStream(
-            path.join(
-              __dirname,
-              "transit",
-              "agencies",
-              agency,
-              "stop_times.txt"
-            ),
-            { flags: "a" }
-          )
-        );
+      ).pipe(
+        fs.createWriteStream(
+          path.join(__dirname, "transit", "agencies", agency, "stop_times.txt"),
+          { flags: "a" }
+        )
+      );
     });
 });

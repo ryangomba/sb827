@@ -111,11 +111,10 @@ export default class MapSection extends React.Component {
                             <th style={{ textAlign: "center" }}>Weekday</th>
                             {new Array(24)
                               .fill(0)
-                              .map(
-                                (_, i) =>
-                                  i >= 6 && i < 22 ? (
-                                    <th key={i}>{i == 12 ? 12 : i % 12}</th>
-                                  ) : null
+                              .map((_, i) =>
+                                i >= 6 && i < 22 ? (
+                                  <th key={i}>{i === 12 ? 12 : i % 12}</th>
+                                ) : null
                               )}
                           </tr>
                           {Object.entries(segment.weekday).map(
@@ -127,9 +126,8 @@ export default class MapSection extends React.Component {
                                 <td>
                                   {name} towards {headsign}
                                 </td>
-                                {stopCountByHour.map(
-                                  (count, i) =>
-                                    i >= 6 && i < 22 ? <td>{count}</td> : null
+                                {stopCountByHour.map((count, i) =>
+                                  i >= 6 && i < 22 ? <td>{count}</td> : null
                                 )}
                               </tr>
                             )
@@ -138,11 +136,10 @@ export default class MapSection extends React.Component {
                             <th style={{ textAlign: "center" }}>Saturday</th>
                             {new Array(24)
                               .fill(0)
-                              .map(
-                                (_, i) =>
-                                  i >= 8 && i < 22 ? (
-                                    <th key={i}>{i == 12 ? 12 : i % 12}</th>
-                                  ) : null
+                              .map((_, i) =>
+                                i >= 8 && i < 22 ? (
+                                  <th key={i}>{i === 12 ? 12 : i % 12}</th>
+                                ) : null
                               )}
                           </tr>
                           {Object.entries(segment.saturday).map(
@@ -154,9 +151,8 @@ export default class MapSection extends React.Component {
                                 <td>
                                   {name} towards {headsign}
                                 </td>
-                                {stopCountByHour.map(
-                                  (count, i) =>
-                                    i >= 8 && i < 22 ? <td>{count}</td> : null
+                                {stopCountByHour.map((count, i) =>
+                                  i >= 8 && i < 22 ? <td>{count}</td> : null
                                 )}
                               </tr>
                             )
@@ -165,11 +161,10 @@ export default class MapSection extends React.Component {
                             <th style={{ textAlign: "center" }}>Sunday</th>
                             {new Array(24)
                               .fill(0)
-                              .map(
-                                (_, i) =>
-                                  i >= 8 && i < 22 ? (
-                                    <th key={i}>{i == 12 ? 12 : i % 12}</th>
-                                  ) : null
+                              .map((_, i) =>
+                                i >= 8 && i < 22 ? (
+                                  <th key={i}>{i === 12 ? 12 : i % 12}</th>
+                                ) : null
                               )}
                           </tr>
                           {Object.entries(segment.sunday).map(
@@ -181,9 +176,8 @@ export default class MapSection extends React.Component {
                                 <td>
                                   {name} towards {headsign}
                                 </td>
-                                {stopCountByHour.map(
-                                  (count, i) =>
-                                    i >= 8 && i < 22 ? <td>{count}</td> : null
+                                {stopCountByHour.map((count, i) =>
+                                  i >= 8 && i < 22 ? <td>{count}</td> : null
                                 )}
                               </tr>
                             )
