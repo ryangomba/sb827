@@ -1,11 +1,12 @@
-# transitrichhousing.org
+# SB 827
 
-This is the repo that drives https://transitrichhousing.org/. To install the
-repo:
+This is the repo that drives https://sb827.ryangomba.com. See [Mapping the effects of zoning reform bill SB 827](https://ryangomba.com/mapping-sb-827) for the story behind the code.
+
+To install:
 
 ```
-git clone https://github.com/aickin/visualize-density.git
-cd visualize-density
+git clone https://github.com/ryangomba/sb827.git
+cd sb827
 yarn install
 yarn build-data
 ```
@@ -40,8 +41,9 @@ checking in.
 
 ### Re-generating zoning tiles
 
-See data/zoning/README.md
+See `data/zoning/README.md`
 
 ### Re-generating parcel tiles
 
-See data/parcels/README.md
+See `data/parcels/README.md`
+
